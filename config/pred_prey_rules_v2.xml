@@ -1,0 +1,40 @@
+<PhysiCell_settings version="devel-version">
+
+	<metadata>
+		<dependencies>
+			<expected_cell_types>   <!-- expected vs. required ?? -->
+			</expected_cell_types>
+			<expected_microenvironmental_signals>
+			</expected_microenvironmental_signals>
+		</dependencies>
+	</metadata>
+
+    <base_signals> <!-- [S0] -->
+		<!-- <signal name="oxygen" identifier="O2" ontology="ChEBI" value="8" units="mmHg" />  -->
+	</base_signals> 
+
+	<base_phenotype> <!-- [B0 -->
+        <!-- look at MultiCellDS and also PhysiCell version -->
+	</base_phenotype>
+
+    <cell_definitions>
+        <cell_definition name="prey" ID="0">
+            <cell_rules standard="CBHG" version="4.0">
+                <rules enabled="true">
+                    <rule signal="contact with predator" behavior="cycle entry" maximal_behavior="0.5" type="Hill" half_max="4.0" Hill_power="4" enabled="true" comment="allow offspring" />
+                </rules>
+            </cell_rules>
+        </cell_definition>
+
+        <cell_definition name="predator" ID="1">
+            <cell_rules standard="CBHG" version="4.0">
+                <rules enabled="true">
+                    <!-- predator,contact with prey,increases,phagocytose prey,0.2,0.5,4,0  -->
+                    <rule signal="contact with prey" behavior="phagocytose prey" maximal_behavior="0.2" type="Hill" half_max="0.5" Hill_power="4" enabled="true" comment="predator eats prey" />
+                    <rule signal="contact with predator" behavior="cycle entry" maximal_behavior="0.5" type="Hill" half_max="4.0" Hill_power="4" enabled="true" comment="allow offspring" />
+                </rules>
+            </cell_rules>
+        </cell_definition>
+    </cell_definitions>
+
+</PhysiCell_settings>
