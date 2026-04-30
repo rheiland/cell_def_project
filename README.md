@@ -1,6 +1,6 @@
 # cell_def_project
 
-This repo covers two separate, but related projects, led by students that resulted in two separate posters presented in May 2026. They both relate to [PhysiCell](https://physicell.org) Cell Definitions. One project focuses on validating the XML that define Cell Definitions; the other focuses on obtaining relevant parameters (from PubMed) for Cell Definitions.
+This repo covers two separate, but related projects, led by IU Luddy SICE undergraduate students that resulted in two separate posters presented in May 2026. They both relate to [PhysiCell](https://physicell.org) Cell Definitions. One project focuses on validating the XML that define Cell Definitions; the other focuses on obtaining relevant parameters (from PubMed) for Cell Definitions.
 
 ---
 To get started, either clone or download this repo, or better yet, "fork" this repo into your own GitHub account and run it from there. 
