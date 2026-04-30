@@ -1,7 +1,8 @@
 # cell_def_project
 
-This student-led project will explore the concept of Cell Definitions for PhysiCell and how they might evolve.
+This repo covers two separate, but related projects, led by students that resulted in two separate posters presented in May 2026. They both relate to [PhysiCell](https://physicell.org) Cell Definitions. One project focuses on validating the XML that define Cell Definitions; the other focuses on obtaining relevant parameters (from PubMed) for Cell Definitions.
 
+---
 To get started, either clone or download this repo, or better yet, "fork" this repo into your own GitHub account and run it from there. 
 
 In your VSCode, use `File -> Open folder` to open the directory where you cloned it.  Then in your VSCode Terminal, try running these 3 commands (we are assuming you're on Windows):
@@ -53,4 +54,21 @@ pip install pyschematron
 # In /config, try to run and experiment with:
 python validate_model.py model_bad_1.xml
 python validate_model.py model_good_1.xml
+```
+
+---
+# Searching PubMed for cell parameters
+
+```
+$ pip install metapub
+$ python pubmed_1.py
+→ possible to get: “Too Many Requests for url: https://eutils.ncbi.nlm.nih.gov”
+Create/use an API key (in your NCBI account)
+$ export NCBI_API_KEY="60152f7c0539bbc0…"
+```
+
+```
+$ python pubmed_2.py 
+Found 2 papers with accessible PDFs
+[{'title': 'Generalized Lévy walks and the role of chemokines in migration of effector CD8+ T cells.', 'journal': 'Nature', 'pdf_url': 'https://www.nature.com/articles/nature11098.pdf '}, {'title': 'M2 bone marrow-derived macrophage-derived exosomes shuffle microRNA-21 to accelerate immune escape of glioma by modulating PEG3.', 'journal': 'Cancer Cell Int', 'pdf_url': 'http://www.biomedcentral.com/content/pdf/s12935-020-1163-9.pdf '}]
 ```
